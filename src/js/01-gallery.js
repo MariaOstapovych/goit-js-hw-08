@@ -4,4 +4,11 @@ import { galleryItems } from './gallery-items';
 
 console.log(galleryItems);
 
-console.log(hello)
+
+import SimpleLightbox from "simplelightbox";
+import * as data from "../../../goit-js-hw-07/js/02-lightbox"
+import "simplelightbox/dist/simple-lightbox.min.css";
+
+
+
+
