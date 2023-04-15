@@ -6,9 +6,26 @@ console.log(galleryItems);
 
 
 import SimpleLightbox from "simplelightbox";
-import * as data from "../../../goit-js-hw-07/js/02-lightbox"
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+
+const galleryList = document.querySelector(".gallery");
+
+ (function () {
+    const markup = galleryItems.map(({preview, original, description}) => `<li class="gallery__item">
+    <a class="gallery__link" href="${original}">
+    <img
+      class="gallery__image"
+      src="${preview}"
+      alt="${description}"
+    />
+  </a>
+</li>`).join('');
+galleryList.insertAdjacentHTML("beforeend", markup )
+})();
+
+
+ var lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 
 
